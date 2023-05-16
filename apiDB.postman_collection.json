@@ -1,0 +1,184 @@
+{
+	"info": {
+		"_postman_id": "c7f30f5f-abaa-48f6-97b8-2a1399365c21",
+		"name": "apiDB",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Agencia",
+			"item": [
+				{
+					"name": "ListarAgencia",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/agencias",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agencias"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListarAgenciaPorId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/agencias/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agencias",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CadastrarAgencia",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"numero\": \"11111\",\r\n       \"nome\": \"Centro\",\r\n        \"rua\": \"rua das acacias\",\r\n        \"cep\": \"333311\",\r\n        \"numeroPredio\": 12323\r\n}        ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/agencias",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agencias"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AtualizarAgencia",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"numero\": \"11551\",\r\n       \"nome\": \"Centro\",\r\n        \"rua\": \"rua das acacias\",\r\n        \"cep\": \"333311\",\r\n        \"numeroPredio\": 12323\r\n}        ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/agencias/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agencias",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RemoverAgencia",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/agencias/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agencias",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Pessoa",
+			"item": [
+				{
+					"name": "Listar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/pessoas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pessoas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Filtrar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/pessoas/filtrar?idade=36&sobrenome=Neto",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pessoas",
+								"filtrar"
+							],
+							"query": [
+								{
+									"key": "idade",
+									"value": "36"
+								},
+								{
+									"key": "sobrenome",
+									"value": "Neto"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
