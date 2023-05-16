@@ -2,7 +2,7 @@
 
 ## Introdução 
 
-<p>- Este Projeto apresenta uma API Rest desenvolvida com o auxilio do Spring Boot, e a linguagem Java, para atender os requisitos de um sistema de um pequeno banco virtual, com cliente, tipo de conta, gerente, agência e transações. Com o intuito de exercitar a pratica de montagem de sistemas, com a modelagem da relação entre as entidades, e construção de APIs com todos os beans comuns a um sistema com arquitetura Rest. </p>
+<p>- Este Projeto apresenta uma API Rest desenvolvida com o auxilio do Spring Boot, e a linguagem Java. Com o intuito de exercitar a pratica de montagem de sistemas, com a modelagem da relação entre as entidades, e construção de APIs com todos os beans comuns a um sistema com arquitetura Rest. </p>
 
 ## Índice: 
 
@@ -31,8 +31,8 @@ Na operacionalização do sistema obedecer a seguinte sequência:
 
 ## 📃Funcionalidades
 
-<p>Projeto teste simples de conexão com banco de dados com imagem do banco postgress no docker.</br> 
-Implementado specifications e pageable para filtro e paginação. </br>
+<p>Projeto teste simples de conexão com banco de dados com imagem do banco postgress no docker.</p></br> 
+<p>Implementado specifications e pageable para filtro e paginação.</p> </br>
 
 ## Etapas:
 
@@ -71,12 +71,15 @@ Para cada um dos endpoints das controllers foram montados métodos dentro das se
  <p>Neste momento para utilizar o sistema é necessário rodar o sistema offline dentro de alguma IDE, através do Spring Boot.</p>
    <p><strong>Etapas:</strong></p>
      - Download do projeto e descompactar </br>
-     - Fazer a atualização das dependências com o Maven</br>
+     - Fazer a atualização das dependências com o Maven </br>
      - Fazer a configuração do banco de dados de sua preferência</br>
      - Criar o banco de dados </br>
      - Configurar a API a este banco de dados</br>
      - Rodar o projeto com a app.properties em spring.jpa.hibernate.ddl-auto=create</br>
      - Em seguida colocar spring.jpa.hibernate.ddl-auto=none</br>
+     - Gerar o .jar a ser utilizado na geração da image do docker mvn install -DskipTests </br>
+     - Gerar a imagem localmente docker build -t api-db-docker.jar </br>
+     - Inicializar o multi-container docker-compose up -d </br>
      - Abrir a collection de endpoints com o software que gerencia requisições PostMan</br>
 
 
