@@ -8,5 +8,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface PessoaRepository extends GenericoRepository<Pessoa, Long> {
-    Page<Pessoa> findAll(Specification<Pessoa> spec, Pageable pageable);
+    Page<Pessoa> findAll(Specification<Object> spec, Pageable pageable);
 }
