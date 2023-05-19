@@ -131,9 +131,21 @@
 			"item": [
 				{
 					"name": "Listar",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
 					"request": {
 						"method": "GET",
 						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"filters\": [\n      {\n        \"field\": \"nome\",\n        \"value\": \"Rodrigo\",\n        \"operator\": \"EQUAL\"\n      }\n    ],\n  \"paging\": {\n    \"page\": 0,\n    \"size\": 10,\n    \"sorting\": [\n      {\n        \"field\": \"id\",\n        \"direction\": \"asc\"\n      }\n    ]\n  }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": {
 							"raw": "http://localhost:8080/pessoas",
 							"protocol": "http",
@@ -150,11 +162,23 @@
 				},
 				{
 					"name": "Filtrar",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
 					"request": {
 						"method": "GET",
 						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"filters\": [\n      {\n        \"field\": \"nome\",\n        \"value\": \"Rodrigo\",\n        \"operator\": \"EQUAL\"\n      }\n    ],\n  \"paging\": {\n    \"page\": 0,\n    \"size\": 10,\n    \"sorting\": [\n      {\n        \"field\": \"id\",\n        \"direction\": \"asc\"\n      }\n    ]\n  }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": {
-							"raw": "http://localhost:8080/pessoas/filtrar?idade=36&sobrenome=Neto",
+							"raw": "http://localhost:8080/pessoas/filtrar",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -167,11 +191,13 @@
 							"query": [
 								{
 									"key": "idade",
-									"value": "36"
+									"value": "36",
+									"disabled": true
 								},
 								{
 									"key": "sobrenome",
-									"value": "Neto"
+									"value": "Neto",
+									"disabled": true
 								}
 							]
 						}
